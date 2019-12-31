@@ -15,6 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('hello/rest', 'HelloController@rest');
 Route::get('hello/{id?}/{pass?}', 'HelloController@index');
 
 Route::resource('rest', 'RestappController');

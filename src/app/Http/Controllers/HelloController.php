@@ -10,4 +10,8 @@ class HelloController extends Controller
         $data = ['msg'=>'メッセージ', 'id'=>$id, 'pass'=>$pass];
         return view('hello.index', $data);
     }
+
+    public function rest (Request $request) {
+        return view('hello.rest');
+    }
 }
