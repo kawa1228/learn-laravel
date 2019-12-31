@@ -1,0 +1,13 @@
+<html>
+<head>
+<title>Hello</title>
+</head>
+<body>
+    <h1>index/id/passページです</h1>
+    <ul>
+        <li>{{$msg}}</li>
+        <li>{{$id}}</li>
+        <li>{{$pass}}</li>
+    </ul>
+</body>
+</html>

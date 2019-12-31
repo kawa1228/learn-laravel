@@ -6,16 +6,8 @@ use Illuminate\Http\Request;
 
 class HelloController extends Controller
 {
-    public function index () {
-        return <<<EOF
-<html>
-<head>
-<title>Hello</title>
-</head>
-<body>
-    <h1>indexページです</h1>
-</body>
-</html>
-EOF;
+    public function index ($id='noname', $pass='unknown') {
+        $data = ['msg'=>'メッセージ', 'id'=>$id, 'pass'=>$pass];
+        return view('hello.index', $data);
     }
 }
