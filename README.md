@@ -1,3 +1,5 @@
+![ezgif com-video-to-gif](https://user-images.githubusercontent.com/45552269/71615398-7ef19e80-2bf4-11ea-814e-18e77b7dac48.gif)
+
 # docker-laravel
 
 Build Laravel's development environment using docker.
