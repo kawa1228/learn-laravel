@@ -20,6 +20,6 @@ Route::get('hello/rest', 'HelloController@rest');
 Route::get('hello/session', 'HelloController@ses_get');
 Route::post('hello/session', 'HelloController@ses_put');
 
-Route::get('hello/{id?}/{pass?}', 'HelloController@index');
+Route::get('hello/sample/{id?}/{pass?}', 'HelloController@sample');
 
 Route::resource('rest', 'RestappController');
