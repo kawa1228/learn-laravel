@@ -8,10 +8,18 @@ use Illuminate\Support\Facades\DB;
 class HelloController extends Controller
 {
     public function index (Request $request) {
+        $sort = $request->sort;
+        if (is_null($sort)) {
+            $sort = 'id';
+        }
         // 5項目ずつレコードを取り出す
-        // $items = DB::table('people')->simplePaginate(5);
-        $items = DB::select('select * from people');
-        return view('hello.index', ['items' => $items]);
+        // DBクラスを使った場合
+        $items = DB::table('people')->orderBy($sort, 'asc')->simplePaginate(5);
+        // Personモデルを使った場合
+        // $items = Person::simplePaginate(5);
+        // $items = DB::select('select * from people');
+        $param = ['items' => $items, 'sort' => $sort];
+        return view('hello.index', $param);
     }
 
     public function rest (Request $request) {
