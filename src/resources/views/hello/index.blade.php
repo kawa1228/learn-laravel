@@ -3,12 +3,12 @@
 .pagenation { font-size: 10pt; }
 .pagenatioon li { display: inline-block; }
 </style>
-@section('title', 'Index')
+{{-- @section('title', 'Index')
 
 @section('menubar')
     @parent
     インデックスページ
-@endsection
+@endsection --}}
 
 @section('content')
     <table>
@@ -25,9 +25,9 @@
             </tr>
         @endforeach
     </table>
-    {{-- {{ $items->links() }} --}}
+    {{ $items->links() }}
 @endsection
 
 @section('footer')
-    copyright 2020 .
+    {{-- copyright 2020 . --}}
 @endsection

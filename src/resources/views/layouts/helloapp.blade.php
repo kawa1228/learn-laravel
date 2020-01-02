@@ -9,12 +9,12 @@
 <body>
     <h1>@yield('title')</h1>
     @section('menubar')
-        <h2>メニュー</h2>
+        {{-- <h2>メニュー</h2>
         <ul>
             <li>
                 @show
             </li>
-        </ul>
+        </ul> --}}
         <div class="content">
             @yield('content')
         </div>
